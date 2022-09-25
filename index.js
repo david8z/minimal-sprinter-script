@@ -49,6 +49,6 @@ http
     await browser.close();
     res.end(JSON.stringify(results));
   })
-  .listen(process.env.NODE_PORT);
+  .listen(process.env.PORT);
 
-console.log("Server listneing on PORT: " + process.env.NODE_PORT);
+console.log("Server listneing on PORT: " + process.env.PORT);
