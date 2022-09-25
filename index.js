@@ -1,3 +1,4 @@
+require("dotenv").config();
 const puppeteer = require("puppeteer");
 const http = require("http");
 
@@ -48,6 +49,6 @@ http
     await browser.close();
     res.end(JSON.stringify(results));
   })
-  .listen(NODE_PORT);
+  .listen(process.env.NODE_PORT);
 
-console.log("Server listneing on PORT: " + NODE_PORT);
+console.log("Server listneing on PORT: " + process.env.NODE_PORT);
